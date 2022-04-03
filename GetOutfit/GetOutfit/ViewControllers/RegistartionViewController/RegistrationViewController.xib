@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController" customModule="GetOutfit" customModuleProvider="target">
+            <connections>
+                <outlet property="genderSegment" destination="0Eb-Tp-co4" id="lve-b0-2k9"/>
+                <outlet property="nameTextField" destination="IUp-dc-ytX" id="4Kv-la-6wD"/>
+                <outlet property="nextButton" destination="WX2-X9-U2M" id="9ST-Sc-2cS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XC0-UK-jjE" userLabel="ContainerView">
+                    <rect key="frame" x="14" y="44" width="386" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUp-dc-ytX" userLabel="NameTextField" customClass="BaseTextField" customModule="GetOutfit" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="386" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" constant="60" id="6Q0-CF-FlQ"/>
+                            </constraints>
+                        </view>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0Eb-Tp-co4" userLabel="genderSegment">
+                            <rect key="frame" x="0.0" y="74" width="386" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="IuB-2x-ZyR"/>
+                            </constraints>
+                            <segments>
+                                <segment title="Мужчина"/>
+                                <segment title="Женщина"/>
+                            </segments>
+                            <color key="selectedSegmentTintColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="0Eb-Tp-co4" secondAttribute="trailing" id="7gh-YT-LPp"/>
+                        <constraint firstAttribute="trailing" secondItem="IUp-dc-ytX" secondAttribute="trailing" id="RV5-WV-fLJ"/>
+                        <constraint firstItem="IUp-dc-ytX" firstAttribute="top" secondItem="XC0-UK-jjE" secondAttribute="top" id="ReV-Es-e9e"/>
+                        <constraint firstItem="IUp-dc-ytX" firstAttribute="leading" secondItem="XC0-UK-jjE" secondAttribute="leading" id="Vf1-Rl-TZa"/>
+                        <constraint firstItem="0Eb-Tp-co4" firstAttribute="leading" secondItem="XC0-UK-jjE" secondAttribute="leading" id="uub-kd-4Je"/>
+                        <constraint firstItem="0Eb-Tp-co4" firstAttribute="top" secondItem="IUp-dc-ytX" secondAttribute="bottom" constant="14" id="vFW-5m-cWh"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDx-eJ-BSC" userLabel="ButtonView">
+                    <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WX2-X9-U2M">
+                            <rect key="frame" x="16" y="16" width="382" height="48"/>
+                            <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="0Qv-XO-paO"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Продолжить">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="nextBtnActive:" destination="-1" eventType="touchUpInside" id="42V-zM-ygh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="WX2-X9-U2M" firstAttribute="leading" secondItem="HDx-eJ-BSC" secondAttribute="leading" constant="16" id="Bv2-oN-xio"/>
+                        <constraint firstAttribute="bottom" secondItem="WX2-X9-U2M" secondAttribute="bottom" constant="16" id="YZ8-Xh-X7V"/>
+                        <constraint firstAttribute="trailing" secondItem="WX2-X9-U2M" secondAttribute="trailing" constant="16" id="cJ9-mh-nWU"/>
+                        <constraint firstItem="WX2-X9-U2M" firstAttribute="top" secondItem="HDx-eJ-BSC" secondAttribute="top" constant="16" id="duC-BT-nry"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="XC0-UK-jjE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Eio-3L-fqm"/>
+                <constraint firstItem="XC0-UK-jjE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="FqU-NX-BPo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XC0-UK-jjE" secondAttribute="bottom" id="Lug-3h-OU5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XC0-UK-jjE" secondAttribute="trailing" constant="14" id="PIj-UK-CKt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HDx-eJ-BSC" secondAttribute="trailing" id="RoT-Dv-rsx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HDx-eJ-BSC" secondAttribute="bottom" id="Xhv-XQ-lce"/>
+                <constraint firstItem="HDx-eJ-BSC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="u9b-x2-7mB"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="65.625"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
