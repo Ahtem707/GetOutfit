@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // TODO: - Удаление данных пользователя, позволяет попасть на страницу регистрации
 //        StorageManager.user = nil
         
-        let rootVC = ViewController()
+        let rootVC = TabBarViewController()
         let navigationController = UINavigationController(rootViewController: rootVC)
         if StorageManager.user == nil {
             let regVC = RegistrationViewController()

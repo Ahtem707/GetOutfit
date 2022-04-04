@@ -10,6 +10,8 @@
 		182B04D227FA26C700BD716C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B04D127FA26C700BD716C /* StorageManager.swift */; };
 		182B04D527FA33D000BD716C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B04D427FA33D000BD716C /* User.swift */; };
 		182B04DA27FA4FB500BD716C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B04D927FA4FB500BD716C /* ViewController.swift */; };
+		1850B0AD27FB136100EE7D79 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850B0AB27FB136100EE7D79 /* TabBarItems.swift */; };
+		1850B0AE27FB136100EE7D79 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850B0AC27FB136100EE7D79 /* TabBarViewController.swift */; };
 		18A8D98B27F9ACA40060D0DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8D98A27F9ACA40060D0DF /* AppDelegate.swift */; };
 		18A8D99427F9ACA70060D0DF /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D99327F9ACA70060D0DF /* App.xcassets */; };
 		18A8D99727F9ACA70060D0DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D99527F9ACA70060D0DF /* LaunchScreen.storyboard */; };
@@ -37,6 +39,8 @@
 		182B04D127FA26C700BD716C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		182B04D427FA33D000BD716C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		182B04D927FA4FB500BD716C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1850B0AB27FB136100EE7D79 /* TabBarItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
+		1850B0AC27FB136100EE7D79 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		18A8D98727F9ACA40060D0DF /* GetOutfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetOutfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A8D98A27F9ACA40060D0DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A8D99327F9ACA70060D0DF /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 				182B04D927FA4FB500BD716C /* ViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1850B0AA27FB132C00EE7D79 /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1850B0AB27FB136100EE7D79 /* TabBarItems.swift */,
+				1850B0AC27FB136100EE7D79 /* TabBarViewController.swift */,
+			);
+			path = TabBarViewController;
 			sourceTree = "<group>";
 		};
 		18A8D97E27F9ACA40060D0DF = {
@@ -205,8 +218,9 @@
 		18A8D9BF27F9EBD20060D0DF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				182B04D827FA4FB500BD716C /* ViewController */,
+				1850B0AA27FB132C00EE7D79 /* TabBarViewController */,
 				18A8D9C027F9EBDA0060D0DF /* RegistartionViewController */,
+				182B04D827FA4FB500BD716C /* ViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -375,11 +389,13 @@
 				18A8D9C327F9EBF20060D0DF /* RegistrationViewController.swift in Sources */,
 				18A8D9C727F9ED250060D0DF /* BaseTextField.swift in Sources */,
 				182B04D227FA26C700BD716C /* StorageManager.swift in Sources */,
+				1850B0AE27FB136100EE7D79 /* TabBarViewController.swift in Sources */,
 				18A8D9B927F9B04F0060D0DF /* UIImage.swift in Sources */,
 				18A8D9B727F9B02E0060D0DF /* UIColor.swift in Sources */,
 				18A8D98B27F9ACA40060D0DF /* AppDelegate.swift in Sources */,
 				18A8D9C927F9F76C0060D0DF /* CustomComponent.swift in Sources */,
 				182B04D527FA33D000BD716C /* User.swift in Sources */,
+				1850B0AD27FB136100EE7D79 /* TabBarItems.swift in Sources */,
 				18A8D9A127F9AFAF0060D0DF /* UIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
