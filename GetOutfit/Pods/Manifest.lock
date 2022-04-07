@@ -1,16 +1,22 @@
 PODS:
   - ObjectMapper (4.2.0)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
 
 DEPENDENCIES:
   - ObjectMapper
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
     - ObjectMapper
+    - SDWebImage
 
 SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
 
-PODFILE CHECKSUM: 6a58665f4cc47e855984d65a8b212509903ef2b8
+PODFILE CHECKSUM: 9ca653c2176b84fa59778141866a691ed58e72b0
 
 COCOAPODS: 1.11.2

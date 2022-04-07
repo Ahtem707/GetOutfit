@@ -7,5 +7,6 @@ target 'GetOutfit' do
 
   # Pods for GetOutfit
   pod 'ObjectMapper'
+  pod 'SDWebImage'
 
 end
