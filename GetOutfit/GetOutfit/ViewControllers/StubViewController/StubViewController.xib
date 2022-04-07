@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StubViewController" customModule="GetOutfit" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="H3h-jf-4u9" id="VP4-XU-0cf"/>
+                <outlet property="label" destination="yCH-4X-X1Z" id="tCn-oD-Bnn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3D-mB-dgA" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="299" width="414" height="298"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="System/stubImage" translatesAutoresizingMaskIntoConstraints="NO" id="H3h-jf-4u9" userLabel="stubImage">
+                            <rect key="frame" x="107" y="0.0" width="200" height="200"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="B8k-L1-lyb"/>
+                                <constraint firstAttribute="height" constant="200" id="NuM-if-TUv"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCH-4X-X1Z" userLabel="label">
+                            <rect key="frame" x="37.5" y="260" width="339.5" height="38"/>
+                            <string key="text">Данный раздел все еще находится в разработке.
+Просим прощения за неудобства</string>
+                            <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="H3h-jf-4u9" firstAttribute="centerX" secondItem="m3D-mB-dgA" secondAttribute="centerX" id="9sG-DM-DgE"/>
+                        <constraint firstItem="H3h-jf-4u9" firstAttribute="top" secondItem="m3D-mB-dgA" secondAttribute="top" id="NcM-xx-QPb"/>
+                        <constraint firstAttribute="bottom" secondItem="yCH-4X-X1Z" secondAttribute="bottom" id="kZs-ig-N2j"/>
+                        <constraint firstItem="yCH-4X-X1Z" firstAttribute="top" secondItem="H3h-jf-4u9" secondAttribute="bottom" constant="60" id="nyz-1Z-TN5"/>
+                        <constraint firstItem="yCH-4X-X1Z" firstAttribute="centerX" secondItem="m3D-mB-dgA" secondAttribute="centerX" id="ptF-Ov-561"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="m3D-mB-dgA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Znp-E6-5FC"/>
+                <constraint firstItem="m3D-mB-dgA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="iQo-3D-2vh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="m3D-mB-dgA" secondAttribute="trailing" id="o7M-oG-FTn"/>
+            </constraints>
+            <point key="canvasLocation" x="119" y="-14"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="System/stubImage" width="193" height="193"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -15,10 +15,10 @@ enum TabBarItems: CaseIterable {
     
     var viewController: UIViewController {
         switch self {
-            case .home: return ViewController()
-            case .myImage: return ViewController()
-            case .favorite: return ViewController()
-            case .profile: return ViewController()
+            case .home: return StubViewController()
+            case .myImage: return StubViewController()
+            case .favorite: return StubViewController()
+            case .profile: return StubViewController()
         }
     }
     

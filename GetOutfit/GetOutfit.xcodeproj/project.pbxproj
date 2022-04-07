@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		182B04D227FA26C700BD716C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B04D127FA26C700BD716C /* StorageManager.swift */; };
 		182B04D527FA33D000BD716C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B04D427FA33D000BD716C /* User.swift */; };
-		182B04DA27FA4FB500BD716C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B04D927FA4FB500BD716C /* ViewController.swift */; };
 		1850B0AD27FB136100EE7D79 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850B0AB27FB136100EE7D79 /* TabBarItems.swift */; };
 		1850B0AE27FB136100EE7D79 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850B0AC27FB136100EE7D79 /* TabBarViewController.swift */; };
 		1850B0B827FB820700EE7D79 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850B0B727FB820700EE7D79 /* AppConfig.swift */; };
@@ -26,6 +25,8 @@
 		188BC6B927FF448D009E0EC1 /* Occasions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6B827FF448D009E0EC1 /* Occasions.swift */; };
 		188BC6BB27FF46F7009E0EC1 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6BA27FF46F7009E0EC1 /* Onboarding.swift */; };
 		188BC6BD27FF483E009E0EC1 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6BC27FF483E009E0EC1 /* Server.swift */; };
+		188BC6C227FF615B009E0EC1 /* StubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6C027FF615B009E0EC1 /* StubViewController.swift */; };
+		188BC6C327FF615B009E0EC1 /* StubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188BC6C127FF615B009E0EC1 /* StubViewController.xib */; };
 		18A8D98B27F9ACA40060D0DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8D98A27F9ACA40060D0DF /* AppDelegate.swift */; };
 		18A8D99427F9ACA70060D0DF /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D99327F9ACA70060D0DF /* App.xcassets */; };
 		18A8D99727F9ACA70060D0DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D99527F9ACA70060D0DF /* LaunchScreen.storyboard */; };
@@ -52,7 +53,6 @@
 /* Begin PBXFileReference section */
 		182B04D127FA26C700BD716C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		182B04D427FA33D000BD716C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		182B04D927FA4FB500BD716C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1850B0AB27FB136100EE7D79 /* TabBarItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
 		1850B0AC27FB136100EE7D79 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1850B0B727FB820700EE7D79 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
@@ -70,6 +70,8 @@
 		188BC6B827FF448D009E0EC1 /* Occasions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occasions.swift; sourceTree = "<group>"; };
 		188BC6BA27FF46F7009E0EC1 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		188BC6BC27FF483E009E0EC1 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		188BC6C027FF615B009E0EC1 /* StubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubViewController.swift; sourceTree = "<group>"; };
+		188BC6C127FF615B009E0EC1 /* StubViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StubViewController.xib; sourceTree = "<group>"; };
 		18A8D98727F9ACA40060D0DF /* GetOutfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetOutfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A8D98A27F9ACA40060D0DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A8D99327F9ACA70060D0DF /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
@@ -125,12 +127,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		182B04D827FA4FB500BD716C /* ViewController */ = {
+		182B04D827FA4FB500BD716C /* StubViewController */ = {
 			isa = PBXGroup;
 			children = (
-				182B04D927FA4FB500BD716C /* ViewController.swift */,
+				188BC6C027FF615B009E0EC1 /* StubViewController.swift */,
+				188BC6C127FF615B009E0EC1 /* StubViewController.xib */,
 			);
-			path = ViewController;
+			path = StubViewController;
 			sourceTree = "<group>";
 		};
 		1850B0AA27FB132C00EE7D79 /* TabBarViewController */ = {
@@ -294,7 +297,7 @@
 			children = (
 				1850B0AA27FB132C00EE7D79 /* TabBarViewController */,
 				18A8D9C027F9EBDA0060D0DF /* RegistartionViewController */,
-				182B04D827FA4FB500BD716C /* ViewController */,
+				182B04D827FA4FB500BD716C /* StubViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				18A8D99427F9ACA70060D0DF /* App.xcassets in Resources */,
 				18A8D9B227F9AFED0060D0DF /* SFPRODISPLAYTHINITALIC.OTF in Resources */,
 				18A8D9AD27F9AFED0060D0DF /* SFPRODISPLAYSEMIBOLDITALIC.OTF in Resources */,
+				188BC6C327FF615B009E0EC1 /* StubViewController.xib in Resources */,
 				18A8D9B327F9AFED0060D0DF /* SFPRODISPLAYBOLD.OTF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,7 +463,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182B04DA27FA4FB500BD716C /* ViewController.swift in Sources */,
 				1850B0BD27FB83EC00EE7D79 /* Categories.swift in Sources */,
 				18A8D9C327F9EBF20060D0DF /* RegistrationViewController.swift in Sources */,
 				18A8D9C727F9ED250060D0DF /* BaseTextField.swift in Sources */,
@@ -471,6 +474,7 @@
 				182B04D227FA26C700BD716C /* StorageManager.swift in Sources */,
 				1850B0AE27FB136100EE7D79 /* TabBarViewController.swift in Sources */,
 				18A8D9B927F9B04F0060D0DF /* UIImage.swift in Sources */,
+				188BC6C227FF615B009E0EC1 /* StubViewController.swift in Sources */,
 				188BC6BD27FF483E009E0EC1 /* Server.swift in Sources */,
 				18A8D9B727F9B02E0060D0DF /* UIColor.swift in Sources */,
 				188BC6B927FF448D009E0EC1 /* Occasions.swift in Sources */,
