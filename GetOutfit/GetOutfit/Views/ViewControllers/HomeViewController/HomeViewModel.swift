@@ -47,27 +47,26 @@ extension HomeViewModel {
         return 1
     }
     
-    func getSectionItem(_ indexPath: IndexPath) -> (FeedSectionHeaderView.In, FeedSectionHeaderView.Out) {
+    func getSectionItem(_ indexPath: IndexPath) -> (FeedSectionHeaderView.In?, FeedSectionHeaderView.Out?) {
         let input = FeedSectionHeaderView.In(
             title: "Test")
         
-        let output = FeedSectionHeaderView.Out()
-        
-        return (input, output)
+        return (input, nil)
     }
     
     func getNumberOfItemsInSection() -> Int {
         return products.count
     }
     
-    func getCellContent(_ indexPath: IndexPath) -> (FeedItemCollectionCell.In, FeedItemCollectionCell.Out) {
+    func getCellContent(_ indexPath: IndexPath) -> (FeedItemCollectionCell.In?, FeedItemCollectionCell.Out?) {
         
         let item = products[indexPath.row]
         
-        let isFavorit = favoritProducts.contains(item.id)
+        guard let id = item.id else { return (nil, nil) }
+        let isFavorit = favoritProducts.contains(id)
         
         let input = FeedItemCollectionCell.In(
-            id: item.id,
+            id: id,
             image: item.pictures?.first,
             title: item.name,
             subTitle: item.vendorName,
