@@ -21,6 +21,7 @@ class FeedSectionHeaderView: UICollectionReusableView, CollectionViewSectionProt
         didSet { self.setupContent() }
     }
     var output: Out?
+    var didSelectAllButtonClosure: Closure?
     
     // MARK: - Public function
     func setContent(_ text: String) {
@@ -65,6 +66,6 @@ extension FeedSectionHeaderView {
 // MARK: - Actions
 extension FeedSectionHeaderView {
     @objc private func allButtonAction() {
-        output?.didSelectAllButton?()
+        didSelectAllButtonClosure?()
     }
 }

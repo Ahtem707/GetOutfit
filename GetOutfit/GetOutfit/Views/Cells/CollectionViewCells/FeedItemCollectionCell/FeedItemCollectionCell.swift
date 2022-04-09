@@ -26,6 +26,8 @@ class FeedItemCollectionCell: UICollectionViewCell, CollectionViewCellProtocol {
         didSet { self.setupContent() }
     }
     var output: Out?
+    
+    private var isFavorit: Bool = false
 }
 
 // MARK: - Lifecycle
@@ -36,10 +38,6 @@ extension FeedItemCollectionCell {
         self.setupLayout()
         self.setupAppearance()
         self.setupStaticContent()
-        
-        // TODO: - Выключенный функционал
-        self.favoriteButton.isHidden = true
-        self.favoriteButton.isEnabled = false
     }
 }
 
@@ -70,7 +68,7 @@ extension FeedItemCollectionCell {
     }
     
     private func setupStaticContent() {
-        favoriteButton.setImage(_content.productImage, for: .normal)
+        favoriteButton.setImage(_content.favoriteButton, for: .normal)
         title.text = _content.defaultTitle
         subTitle.text = _content.defaultVendor
         amount.text = _content.defaultAmount
@@ -78,16 +76,27 @@ extension FeedItemCollectionCell {
     
     private func setupContent() {
         guard let input = input else { return }
+        isFavorit = input.isFavorit
+        updateFavoritButton()
         productImage.sd_setImage(with: input.image, placeholderImage: UIImage.clothesDefault)
         title.text ?= input.title
         subTitle.text ?= input.subTitle
         amount.text ?= "%@ $".format(input.amount)
+    }
+    
+    private func updateFavoritButton() {
+        let image = isFavorit ? _content.favoriteButtonSelected : _content.favoriteButton
+        favoriteButton.setImage(image, for: .normal)
     }
 }
 
 // MARK: - Actions
 extension FeedItemCollectionCell {
     @objc private func favoriteButtonAction() {
-        output?.didSelectFavorite?()
+        isFavorit = !isFavorit
+        updateFavoritButton()
+        if let id = input?.id {
+            output?.didSelectFavoriteButtonClosure?(id, isFavorit)
+        }
     }
 }

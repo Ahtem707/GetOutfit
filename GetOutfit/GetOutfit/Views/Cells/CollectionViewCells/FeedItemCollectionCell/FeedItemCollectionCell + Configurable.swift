@@ -25,7 +25,8 @@ extension FeedItemCollectionCell {
     }
     
     struct Content {
-        let productImage: UIImage = UIImage.tabbarFavorite
+        let favoriteButton: UIImage = UIImage.favorite
+        let favoriteButtonSelected: UIImage = UIImage.favoriteSelected
         let defaultTitle: String = "Нет названия"
         let defaultVendor: String = "Продавец не указан"
         let defaultAmount: String = "Нет цены"

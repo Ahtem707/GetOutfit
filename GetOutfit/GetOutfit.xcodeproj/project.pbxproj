@@ -69,7 +69,7 @@
 		18B5A5DA28019922009EF992 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5D928019922009EF992 /* UICollectionView.swift */; };
 		18B5A5DC28019D6B009EF992 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5DB28019D6B009EF992 /* UIView.swift */; };
 		18B5A5DE28019D95009EF992 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5DD28019D95009EF992 /* NSObject.swift */; };
-		18B5A5E02801A460009EF992 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5DF2801A460009EF992 /* HomeProtocols.swift */; };
+		18B5A5E02801A460009EF992 /* HomeViewController + Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5DF2801A460009EF992 /* HomeViewController + Protocols.swift */; };
 		18B5A5E22801A5F9009EF992 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5E12801A5F9009EF992 /* HomeViewModel.swift */; };
 		18B5A5E72801AC18009EF992 /* FeedItemCollectionCell + Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5E62801AC17009EF992 /* FeedItemCollectionCell + Configurable.swift */; };
 		18B5A5EB2801AC90009EF992 /* FeedItemCollectionCell + InOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5EA2801AC90009EF992 /* FeedItemCollectionCell + InOut.swift */; };
@@ -77,6 +77,8 @@
 		18B5A5EF2801BA39009EF992 /* FeedSectionHeaderView + InOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5EE2801BA39009EF992 /* FeedSectionHeaderView + InOut.swift */; };
 		18B5A5F22801BCC4009EF992 /* CollectionViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5F12801BCC4009EF992 /* CollectionViewCellProtocol.swift */; };
 		18B5A5F42801BD59009EF992 /* CollectionViewSectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5F32801BD59009EF992 /* CollectionViewSectionProtocol.swift */; };
+		18B5A5F62802257B009EF992 /* FavoriteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5F52802257B009EF992 /* FavoriteProduct.swift */; };
+		18B5A5F8280226AE009EF992 /* HomeViewController + Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5F7280226AE009EF992 /* HomeViewController + Configurable.swift */; };
 		AEB0A9BDB46D9C0CD0B093FC /* Pods_GetOutfit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8C6F4ACEC3C20A1E943D75 /* Pods_GetOutfit.framework */; };
 /* End PBXBuildFile section */
 
@@ -145,7 +147,7 @@
 		18B5A5D928019922009EF992 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		18B5A5DB28019D6B009EF992 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		18B5A5DD28019D95009EF992 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
-		18B5A5DF2801A460009EF992 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		18B5A5DF2801A460009EF992 /* HomeViewController + Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + Protocols.swift"; sourceTree = "<group>"; };
 		18B5A5E12801A5F9009EF992 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		18B5A5E62801AC17009EF992 /* FeedItemCollectionCell + Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedItemCollectionCell + Configurable.swift"; sourceTree = "<group>"; };
 		18B5A5EA2801AC90009EF992 /* FeedItemCollectionCell + InOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedItemCollectionCell + InOut.swift"; sourceTree = "<group>"; };
@@ -153,6 +155,8 @@
 		18B5A5EE2801BA39009EF992 /* FeedSectionHeaderView + InOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedSectionHeaderView + InOut.swift"; sourceTree = "<group>"; };
 		18B5A5F12801BCC4009EF992 /* CollectionViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellProtocol.swift; sourceTree = "<group>"; };
 		18B5A5F32801BD59009EF992 /* CollectionViewSectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionProtocol.swift; sourceTree = "<group>"; };
+		18B5A5F52802257B009EF992 /* FavoriteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProduct.swift; sourceTree = "<group>"; };
+		18B5A5F7280226AE009EF992 /* HomeViewController + Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + Configurable.swift"; sourceTree = "<group>"; };
 		56C26585AC992212D3CE7F7F /* Pods-GetOutfit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOutfit.debug.xcconfig"; path = "Target Support Files/Pods-GetOutfit/Pods-GetOutfit.debug.xcconfig"; sourceTree = "<group>"; };
 		8914ED0886F721153ED76797 /* Pods-GetOutfit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOutfit.release.xcconfig"; path = "Target Support Files/Pods-GetOutfit/Pods-GetOutfit.release.xcconfig"; sourceTree = "<group>"; };
 		FC8C6F4ACEC3C20A1E943D75 /* Pods_GetOutfit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetOutfit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				182B04D427FA33D000BD716C /* User.swift */,
+				18B5A5F52802257B009EF992 /* FavoriteProduct.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -402,8 +407,8 @@
 		18A8D9BF27F9EBD20060D0DF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				18B5A5B828017246009EF992 /* HomeViewController */,
 				18B5A5B328016E42009EF992 /* Base */,
+				18B5A5B828017246009EF992 /* HomeViewController */,
 				188BC6C427FF6E7A009E0EC1 /* ProfileViewController */,
 				1850B0AA27FB132C00EE7D79 /* TabBarViewController */,
 				18A8D9C027F9EBDA0060D0DF /* RegistartionViewController */,
@@ -444,8 +449,9 @@
 			children = (
 				18B5A5C028017296009EF992 /* HomeViewController.swift */,
 				18B5A5CB2801735B009EF992 /* HomeViewController.xib */,
-				18B5A5DF2801A460009EF992 /* HomeProtocols.swift */,
 				18B5A5E12801A5F9009EF992 /* HomeViewModel.swift */,
+				18B5A5F7280226AE009EF992 /* HomeViewController + Configurable.swift */,
+				18B5A5DF2801A460009EF992 /* HomeViewController + Protocols.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -659,6 +665,7 @@
 				188BC6C727FF6E8D009E0EC1 /* ProfileViewController.swift in Sources */,
 				188BC6EA27FF838E009E0EC1 /* UserOptionCell.swift in Sources */,
 				18B5A5EF2801BA39009EF992 /* FeedSectionHeaderView + InOut.swift in Sources */,
+				18B5A5F62802257B009EF992 /* FavoriteProduct.swift in Sources */,
 				185823E327FE573200AAE7E0 /* Gender.swift in Sources */,
 				1850B0C027FB9AC800EE7D79 /* Optional.swift in Sources */,
 				188BC6DE27FF749F009E0EC1 /* Colors.swift in Sources */,
@@ -669,11 +676,12 @@
 				1850B0AE27FB136100EE7D79 /* TabBarViewController.swift in Sources */,
 				18A8D9B927F9B04F0060D0DF /* UIImageView.swift in Sources */,
 				181A07872800E355000BC0E6 /* ProfileProtocols.swift in Sources */,
+				18B5A5F8280226AE009EF992 /* HomeViewController + Configurable.swift in Sources */,
 				188BC6C227FF615B009E0EC1 /* StubViewController.swift in Sources */,
 				18B5A5F42801BD59009EF992 /* CollectionViewSectionProtocol.swift in Sources */,
 				188BC6BD27FF483E009E0EC1 /* Server.swift in Sources */,
 				18A8D9B727F9B02E0060D0DF /* UIColor.swift in Sources */,
-				18B5A5E02801A460009EF992 /* HomeProtocols.swift in Sources */,
+				18B5A5E02801A460009EF992 /* HomeViewController + Protocols.swift in Sources */,
 				188BC6B927FF448D009E0EC1 /* Occasions.swift in Sources */,
 				1850B0C227FBA06600EE7D79 /* String.swift in Sources */,
 				185823E527FE57E100AAE7E0 /* Timestamp.swift in Sources */,

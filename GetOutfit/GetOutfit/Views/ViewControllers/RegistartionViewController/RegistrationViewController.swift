@@ -66,7 +66,7 @@ final class RegistrationViewController: BaseViewController {
         self.title = _text.screenTitle
         nameTextField.setPlaceholder(_text.nameTextFieldPlaceholder)
         genderSegment.removeAllSegments()
-        UserGender.allCases.reversed().forEach { [weak self] in
+        Gender.allCases.reversed().forEach { [weak self] in
             self?.genderSegment.insertSegment(withTitle: $0.value, at: 0, animated: false)
         }
         genderSegment.selectedSegmentIndex = 0
@@ -80,7 +80,7 @@ extension RegistrationViewController {
         let index = genderSegment.selectedSegmentIndex
         let user = User()
         user.name = nameTextField.text
-        user.gender = UserGender.allCases[index]
+        user.gender = Gender.allCases[index]
         StorageManager.user = user
         AppDelegate.updateRootViewController()
     }

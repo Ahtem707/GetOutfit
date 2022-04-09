@@ -9,40 +9,29 @@ import Foundation
 import ObjectMapper
 
 extension StorageManager {
+    fileprivate static let userKey = "user"
     static var user: User? {
         get {
-            shared.mappable(type: User.self, forKey: "user")
+            shared.mappable(type: User.self, forKey: StorageManager.userKey)
         }
         set {
             if newValue == nil {
-                shared.removeObject(forKey: "user")
+                shared.removeObject(forKey: StorageManager.userKey)
             }
-            shared.set(newValue?.toJSONString(), forKey: "user")
-        }
-    }
-}
-
-enum UserGender: CaseIterable {
-    case male
-    case female
-    
-    var value: String {
-        switch self {
-            case .male: return "Мужчина"
-            case .female: return "Женщина"
+            shared.set(newValue?.toJSONString(), forKey: StorageManager.userKey)
         }
     }
 }
 
 final class User: Mappable {
     var name: String?
-    var gender: UserGender?
+    var gender: Gender?
     
     init() {}
     required init?(map: Map) {}
     
     func mapping(map: Map) {
-       name <- map["name"]
-       gender <- map["gender"]
+        name <- map["name"]
+        gender <- map["gender"]
     }
 }

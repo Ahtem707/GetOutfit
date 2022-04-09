@@ -13,6 +13,6 @@ extension FeedSectionHeaderView {
     }
 
     struct Out {
-        var didSelectAllButton: (() -> Void)?
+        
     }
 }

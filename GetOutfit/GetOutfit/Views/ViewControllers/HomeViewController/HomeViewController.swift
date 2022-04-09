@@ -11,6 +11,10 @@ class HomeViewController: TabBarItemViewController, HomeViewControllerDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let _layout = Layout()
+    let _appearance = Appearance()
+    let _content = Content()
+    
     var viewModel: HomeViewModelProtocol? = HomeViewModel()
     
     override func viewDidLoad() {
@@ -24,45 +28,42 @@ class HomeViewController: TabBarItemViewController, HomeViewControllerDelegate {
         collectionView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel?.handleViewWillAppear?()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel?.handleViewDidAppear?()
     }
     
-    func reload() {
-        collectionView.reloadData()
-    }
-    
-    func showError() {
-        let alert = UIAlertController(
-            title: "Сервис временно не доступен",
-            message: "Проверьте подключение к интернету или попробуйте позже",
-            preferredStyle: .alert)
-        let action = UIAlertAction(
-            title: "Ок",
-            style: .default,
-            handler: nil)
-        alert.addAction(action)
-        self.present(alert, animated: true)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewModel?.handleViewWillDisappear?()
     }
 }
 
 // MARK: - CollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
     
+    // TODO: - Временное отключение разделения на секций
     // Количество секций
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return viewModel?.getNumberOfSections() ?? 0
-//    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return viewModel?.getNumberOfSections() ?? 0
+    }
     
     // Контент заголовка
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        let header: FeedSectionHeaderView = collectionView.dequeue(kind: kind, indexPath: indexPath)
-//        if let viewModel = viewModel {
-//            (header.input, header.output) = viewModel.getSectionItem(indexPath)
-//        }
-//        return header
-//    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header: FeedSectionHeaderView = collectionView.dequeue(kind: kind, indexPath: indexPath)
+        if let viewModel = viewModel {
+            (header.input, header.output) = viewModel.getSectionItem(indexPath)
+        }
+        header.didSelectAllButtonClosure = { [weak self] in
+            self?.didSelectAllButton()
+        }
+        return header
+    }
     
     // Количество ячеек в секции
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -80,26 +81,46 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: 50)
+        return CGSize(width: collectionView.frame.size.width, height: _layout.collectionSectionHeight)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 350)
+        return _layout.collectionCellSize
     }
 }
 
 // MARK: - CollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        // TODO: - Нажатие на продукт
     }
 }
 
-// MARK: - FeedSectionHeaderViewDelegate
+// MARK: - HomeViewControllerDelegate
 extension HomeViewController {
+    func reload() {
+        collectionView.reloadData()
+    }
+    
+    func showError() {
+        let alert = UIAlertController(
+            title: _content.errorAlertTitle,
+            message: _content.errorAlertMessage,
+            preferredStyle: .alert)
+        
+        let action = UIAlertAction(
+            title: _content.errorAlertButton,
+            style: .default,
+            handler: nil)
+        
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+    
     func didSelectAllButton() {
-        print("myLog: didSelectAllButton")
+        // TODO: - Нажатие на кнопку просмотра всех продуктов
     }
 }
