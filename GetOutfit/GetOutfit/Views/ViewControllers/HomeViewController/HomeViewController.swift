@@ -47,23 +47,23 @@ class HomeViewController: TabBarItemViewController, HomeViewControllerDelegate {
 // MARK: - CollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
     
-    // TODO: - Временное отключение разделения на секций
+    // TODO: - Временное отключение разделения на секции
     // Количество секций
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return viewModel?.getNumberOfSections() ?? 0
-    }
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return viewModel?.getNumberOfSections() ?? 0
+//    }
     
     // Контент заголовка
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header: FeedSectionHeaderView = collectionView.dequeue(kind: kind, indexPath: indexPath)
-        if let viewModel = viewModel {
-            (header.input, header.output) = viewModel.getSectionItem(indexPath)
-        }
-        header.didSelectAllButtonClosure = { [weak self] in
-            self?.didSelectAllButton()
-        }
-        return header
-    }
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        let header: FeedSectionHeaderView = collectionView.dequeue(kind: kind, indexPath: indexPath)
+//        if let viewModel = viewModel {
+//            (header.input, header.output) = viewModel.getSectionItem(indexPath)
+//        }
+//        header.didSelectAllButtonClosure = { [weak self] in
+//            self?.didSelectAllButton()
+//        }
+//        return header
+//    }
     
     // Количество ячеек в секции
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
