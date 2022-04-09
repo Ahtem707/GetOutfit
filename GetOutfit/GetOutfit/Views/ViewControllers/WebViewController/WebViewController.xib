@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController" customModule="GetOutfit" customModuleProvider="target">
+            <connections>
+                <outlet property="forFemaleButton" destination="yga-0b-C1W" id="vqf-wX-9Fq"/>
+                <outlet property="forMaleButton" destination="7XK-0k-Zxr" id="Kxk-lb-pAa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="FKo-UQ-PtS" id="aAB-zp-w6c"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKo-UQ-PtS">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2c-ga-LAG">
+                    <rect key="frame" x="0.0" y="373" width="414" height="150"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XK-0k-Zxr">
+                            <rect key="frame" x="107" y="10" width="200" height="50"/>
+                            <color key="backgroundColor" red="0.55294117649999996" green="0.74117647060000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="bbe-az-pH3"/>
+                                <constraint firstAttribute="height" constant="50" id="pca-Dx-JcA"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Для него">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yga-0b-C1W">
+                            <rect key="frame" x="107" y="90" width="200" height="50"/>
+                            <color key="backgroundColor" red="0.55294117649999996" green="0.74117647060000003" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="1GA-xc-wYG"/>
+                                <constraint firstAttribute="height" constant="50" id="ZZa-am-wlw"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Для нее">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="yga-0b-C1W" firstAttribute="top" secondItem="7XK-0k-Zxr" secondAttribute="bottom" constant="30" id="JJF-BR-vS0"/>
+                        <constraint firstItem="7XK-0k-Zxr" firstAttribute="centerX" secondItem="c2c-ga-LAG" secondAttribute="centerX" id="Vit-xe-3W0"/>
+                        <constraint firstItem="yga-0b-C1W" firstAttribute="centerX" secondItem="c2c-ga-LAG" secondAttribute="centerX" id="jZY-Cu-ONf"/>
+                        <constraint firstAttribute="bottom" secondItem="yga-0b-C1W" secondAttribute="bottom" constant="10" id="ksq-qL-ix2"/>
+                        <constraint firstItem="7XK-0k-Zxr" firstAttribute="top" secondItem="c2c-ga-LAG" secondAttribute="top" constant="10" id="zNd-aF-tjq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="c2c-ga-LAG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0Wk-RS-ffa"/>
+                <constraint firstItem="FKo-UQ-PtS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IOP-hQ-HW1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c2c-ga-LAG" secondAttribute="trailing" id="QOD-es-7YG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FKo-UQ-PtS" secondAttribute="trailing" id="TFA-od-RkG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FKo-UQ-PtS" secondAttribute="bottom" id="auI-zc-ezz"/>
+                <constraint firstItem="c2c-ga-LAG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ce7-lM-N9U"/>
+                <constraint firstItem="FKo-UQ-PtS" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ujO-bF-cj1"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="100"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

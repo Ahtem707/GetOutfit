@@ -79,6 +79,8 @@
 		18B5A5F42801BD59009EF992 /* CollectionViewSectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5F32801BD59009EF992 /* CollectionViewSectionProtocol.swift */; };
 		18B5A5F62802257B009EF992 /* FavoriteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5F52802257B009EF992 /* FavoriteProduct.swift */; };
 		18B5A5F8280226AE009EF992 /* HomeViewController + Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5F7280226AE009EF992 /* HomeViewController + Configurable.swift */; };
+		18B5A5FC280241C6009EF992 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5FA280241C6009EF992 /* WebViewController.swift */; };
+		18B5A5FD280241C6009EF992 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B5A5FB280241C6009EF992 /* WebViewController.xib */; };
 		AEB0A9BDB46D9C0CD0B093FC /* Pods_GetOutfit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8C6F4ACEC3C20A1E943D75 /* Pods_GetOutfit.framework */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +159,8 @@
 		18B5A5F32801BD59009EF992 /* CollectionViewSectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionProtocol.swift; sourceTree = "<group>"; };
 		18B5A5F52802257B009EF992 /* FavoriteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProduct.swift; sourceTree = "<group>"; };
 		18B5A5F7280226AE009EF992 /* HomeViewController + Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + Configurable.swift"; sourceTree = "<group>"; };
+		18B5A5FA280241C6009EF992 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		18B5A5FB280241C6009EF992 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		56C26585AC992212D3CE7F7F /* Pods-GetOutfit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOutfit.debug.xcconfig"; path = "Target Support Files/Pods-GetOutfit/Pods-GetOutfit.debug.xcconfig"; sourceTree = "<group>"; };
 		8914ED0886F721153ED76797 /* Pods-GetOutfit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOutfit.release.xcconfig"; path = "Target Support Files/Pods-GetOutfit/Pods-GetOutfit.release.xcconfig"; sourceTree = "<group>"; };
 		FC8C6F4ACEC3C20A1E943D75 /* Pods_GetOutfit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetOutfit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,6 +411,7 @@
 		18A8D9BF27F9EBD20060D0DF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18B5A5F9280241A6009EF992 /* WebViewController */,
 				18B5A5B328016E42009EF992 /* Base */,
 				18B5A5B828017246009EF992 /* HomeViewController */,
 				188BC6C427FF6E7A009E0EC1 /* ProfileViewController */,
@@ -504,6 +509,15 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		18B5A5F9280241A6009EF992 /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18B5A5FA280241C6009EF992 /* WebViewController.swift */,
+				18B5A5FB280241C6009EF992 /* WebViewController.xib */,
+			);
+			path = WebViewController;
+			sourceTree = "<group>";
+		};
 		1CB5DE30A117E7FED043D54D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +598,7 @@
 				18A8D9B427F9AFED0060D0DF /* SFPRODISPLAYMEDIUM.OTF in Resources */,
 				18A8D9B127F9AFED0060D0DF /* SFPRODISPLAYREGULAR.OTF in Resources */,
 				18A8D9B527F9AFED0060D0DF /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */,
+				18B5A5FD280241C6009EF992 /* WebViewController.xib in Resources */,
 				188BC6C827FF6E8D009E0EC1 /* ProfileViewController.xib in Resources */,
 				18A8D9BE27F9B7300060D0DF /* Images.xcassets in Resources */,
 				18A8D9AE27F9AFED0060D0DF /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */,
@@ -653,6 +668,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B5A5B728016E8D009EF992 /* TabBarItemViewController.swift in Sources */,
+				18B5A5FC280241C6009EF992 /* WebViewController.swift in Sources */,
 				18B5A5D128018212009EF992 /* FeedItemCollectionCell.swift in Sources */,
 				18B5A5F22801BCC4009EF992 /* CollectionViewCellProtocol.swift in Sources */,
 				1850B0BD27FB83EC00EE7D79 /* Categories.swift in Sources */,

@@ -9,7 +9,7 @@ import Foundation
 
 protocol ProfileViewFactoryProtocol {
     func makeUserProfileVC() -> StubViewController
-    func makeSurveyVC() -> StubViewController
+    func makeSurveyVC() -> WebViewController
     func makeFavoriteBrandsVC() -> StubViewController
 }
 
@@ -18,8 +18,8 @@ final class ProfileViewFactory: ProfileViewFactoryProtocol {
         return StubViewController()
     }
     
-    func makeSurveyVC() -> StubViewController {
-        return StubViewController()
+    func makeSurveyVC() -> WebViewController {
+        return WebViewController()
     }
     
     func makeFavoriteBrandsVC() -> StubViewController {
