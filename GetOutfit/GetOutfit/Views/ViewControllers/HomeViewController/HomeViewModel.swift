@@ -6,17 +6,26 @@
 //
 
 import Foundation
+import UIKit
 
 class HomeViewModel: HomeViewModelProtocol {
     
     var delegate: HomeViewControllerDelegate?
+    var handleViewDidAppear: Closure?
+    
+    var products: [Items] = []
+    
+    init() {
+        self.fetchProducts()
+    }
     
 }
 
 // MARK: - HomeViewModelProtocol
 extension HomeViewModel {
+    
     func getNumberOfSections() -> Int {
-        return 2
+        return 1
     }
     
     func getSectionItem(_ indexPath: IndexPath) -> (FeedSectionHeaderView.In, FeedSectionHeaderView.Out) {
@@ -29,20 +38,55 @@ extension HomeViewModel {
     }
     
     func getNumberOfItemsInSection() -> Int {
-        return 9
+        return products.count
     }
     
     func getCellContent(_ indexPath: IndexPath) -> (FeedItemCollectionCell.In, FeedItemCollectionCell.Out) {
         
+        let item = products[indexPath.row]
+        
         let input = FeedItemCollectionCell.In(
-            image: URL(string: "https://cdn-images.farfetch-contents.com/15/94/21/07/15942107_30120618_1000.jpg"),
-            title: "title: \(indexPath.row)",
-            subTitle: "subTitle: \(indexPath.row)",
-            amount: "amount: \(indexPath.row)")
+            image: item.pictures?.first,
+            title: item.name,
+            subTitle: item.vendorName,
+            amount: item.price)
         
         let output = FeedItemCollectionCell.Out(
             didSelectFavorite: nil)
         
         return (input, output)
+    }
+}
+
+// MARK: - Private function
+extension HomeViewModel {
+    private func fetchProducts() {
+        
+        let dGroup = DispatchGroup()
+        var requestSuccess = false
+        
+        dGroup.enter()
+        handleViewDidAppear = {
+            dGroup.leave()
+        }
+        
+        dGroup.enter()
+        API.items(filter: nil, limit: 50).request { [weak self] (products: [Items]?) in
+            if let products = products, !products.isEmpty {
+                self?.products = products
+                requestSuccess = true
+            } else {
+                requestSuccess = false
+            }
+            dGroup.leave()
+        }
+        
+        dGroup.notify(queue: .main) { [weak self] in
+            if requestSuccess {
+                self?.delegate?.reload()
+            } else {
+                self?.delegate?.showError()
+            }
+        }
     }
 }

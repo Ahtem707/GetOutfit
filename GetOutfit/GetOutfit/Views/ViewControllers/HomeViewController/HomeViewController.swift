@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: TabBarItemViewController {
+class HomeViewController: TabBarItemViewController, HomeViewControllerDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -19,8 +19,31 @@ class HomeViewController: TabBarItemViewController {
         FeedSectionHeaderView.registerView(with: collectionView)
         FeedItemCollectionCell.registerCell(with: collectionView)
         
+        viewModel?.delegate = self
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel?.handleViewDidAppear?()
+    }
+    
+    func reload() {
+        collectionView.reloadData()
+    }
+    
+    func showError() {
+        let alert = UIAlertController(
+            title: "Сервис временно не доступен",
+            message: "Проверьте подключение к интернету или попробуйте позже",
+            preferredStyle: .alert)
+        let action = UIAlertAction(
+            title: "Ок",
+            style: .default,
+            handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
 }
 
@@ -28,18 +51,18 @@ class HomeViewController: TabBarItemViewController {
 extension HomeViewController: UICollectionViewDataSource {
     
     // Количество секций
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return viewModel?.getNumberOfSections() ?? 0
-    }
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return viewModel?.getNumberOfSections() ?? 0
+//    }
     
     // Контент заголовка
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header: FeedSectionHeaderView = collectionView.dequeue(kind: kind, indexPath: indexPath)
-        if let viewModel = viewModel {
-            (header.input, header.output) = viewModel.getSectionItem(indexPath)
-        }
-        return header
-    }
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        let header: FeedSectionHeaderView = collectionView.dequeue(kind: kind, indexPath: indexPath)
+//        if let viewModel = viewModel {
+//            (header.input, header.output) = viewModel.getSectionItem(indexPath)
+//        }
+//        return header
+//    }
     
     // Количество ячеек в секции
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

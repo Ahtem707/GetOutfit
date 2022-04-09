@@ -10,9 +10,9 @@ import UIKit
 extension FeedItemCollectionCell {
     struct In {
         let image: URL?
-        let title: String
-        let subTitle: String
-        let amount: String
+        let title: String?
+        let subTitle: String?
+        let amount: Double?
     }
 
     struct Out {

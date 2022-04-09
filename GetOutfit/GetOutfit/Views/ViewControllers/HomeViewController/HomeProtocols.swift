@@ -7,9 +7,12 @@
 
 import Foundation
 
+typealias Closure = (() -> Void)
+
 // MARK: - ViewController -> ViewModel
 protocol HomeViewModelProtocol {
     var delegate: HomeViewControllerDelegate? { get set }
+    var handleViewDidAppear: Closure? { get set }
     func getNumberOfSections() -> Int
     func getSectionItem(_ indexPath: IndexPath) -> (FeedSectionHeaderView.In, FeedSectionHeaderView.Out)
     func getNumberOfItemsInSection() -> Int
@@ -18,5 +21,6 @@ protocol HomeViewModelProtocol {
 
 // MARK: - ViewModel -> ViewController
 protocol HomeViewControllerDelegate {
-    
+    func reload()
+    func showError()
 }

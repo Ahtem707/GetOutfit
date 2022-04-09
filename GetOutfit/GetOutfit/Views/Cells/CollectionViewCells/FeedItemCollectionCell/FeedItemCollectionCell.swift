@@ -71,14 +71,17 @@ extension FeedItemCollectionCell {
     
     private func setupStaticContent() {
         favoriteButton.setImage(_content.productImage, for: .normal)
+        title.text = _content.defaultTitle
+        subTitle.text = _content.defaultVendor
+        amount.text = _content.defaultAmount
     }
     
     private func setupContent() {
         guard let input = input else { return }
         productImage.sd_setImage(with: input.image, placeholderImage: UIImage.clothesDefault)
-        title.text = input.title
-        subTitle.text = input.subTitle
-        amount.text = "\(input.amount) $"
+        title.text ?= input.title
+        subTitle.text ?= input.subTitle
+        amount.text ?= "%@ $".format(input.amount)
     }
 }
 
