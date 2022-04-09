@@ -88,6 +88,7 @@ extension ProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UserOptionCell = tableView.dequeueReusableCell()
+        cell.selectionStyle = .none
         cell.setupContent(viewModel?.getTableCellContent(indexPath.row))
         return cell
     }
