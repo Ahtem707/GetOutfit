@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum UserOptions: CaseIterable {
+enum ProfileUserOptions: CaseIterable {
     case survey
     case favoriteBrands
     case exit

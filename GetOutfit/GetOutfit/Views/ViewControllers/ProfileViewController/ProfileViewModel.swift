@@ -19,7 +19,7 @@ class ProfileViewModel: ProfileViewModelDelegate {
         return "!Error!"
     }
     
-    private let userOptions = UserOptions.allCases
+    private let userOptions = ProfileUserOptions.allCases
     
     func getTableCellCount() -> Int {
         return userOptions.count

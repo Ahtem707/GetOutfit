@@ -19,7 +19,7 @@ extension StubViewController {
     }
 }
 
-class StubViewController: UIViewController {
+class StubViewController: BaseViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!

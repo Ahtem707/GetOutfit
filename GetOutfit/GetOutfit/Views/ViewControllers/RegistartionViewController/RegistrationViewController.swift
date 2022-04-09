@@ -27,7 +27,7 @@ extension RegistrationViewController {
     }
 }
 
-final class RegistrationViewController: UIViewController {
+final class RegistrationViewController: BaseViewController {
 
     @IBOutlet private weak var nameTextField: BaseTextField!
     @IBOutlet private weak var genderSegment: UISegmentedControl!

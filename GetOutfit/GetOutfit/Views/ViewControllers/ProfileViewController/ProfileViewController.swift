@@ -21,7 +21,7 @@ extension ProfileViewController {
     }
 }
 
-class ProfileViewController: UIViewController, ProfileViewControllerDelegate {
+class ProfileViewController: TabBarItemViewController, ProfileViewControllerDelegate {
 
     @IBOutlet private weak var userView: UIView!
     @IBOutlet private weak var userImage: UIImageView!
@@ -32,7 +32,11 @@ class ProfileViewController: UIViewController, ProfileViewControllerDelegate {
     let _layout = Layout()
     let _appearance = Appearance()
     var viewModel: ProfileViewModelDelegate? = ProfileViewModel()
-    
+    var factory: ProfileViewFactoryProtocol = ProfileViewFactory()
+}
+
+// MARK: - Lifecicle
+extension ProfileViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,7 +46,10 @@ class ProfileViewController: UIViewController, ProfileViewControllerDelegate {
         self.setupContent()
         self.viewModel?.delegate = self
     }
-    
+}
+
+// MARK: - Setup finction
+extension ProfileViewController {
     private func setupSubviews() {
         userView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onUserViewTap)))
         
@@ -97,15 +104,16 @@ extension ProfileViewController: UITableViewDelegate {
 extension ProfileViewController {
     
     @objc func onUserViewTap() {
-        
+        // TODO: - Отключен
+//        self.navigationController?.pushViewController(factory.makeUserProfileVC(), animated: true)
     }
     
     func surveyAction() {
-        
+        self.navigationController?.pushViewController(factory.makeSurveyVC(), animated: true)
     }
     
     func favoriteBrandsAction() {
-        
+        self.navigationController?.pushViewController(factory.makeFavoriteBrandsVC(), animated: true)
     }
     
     func exitAction() {

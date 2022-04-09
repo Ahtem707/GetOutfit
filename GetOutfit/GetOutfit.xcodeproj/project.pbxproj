@@ -33,7 +33,7 @@
 		188BC6DE27FF749F009E0EC1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6DD27FF749F009E0EC1 /* Colors.swift */; };
 		188BC6E027FF74CC009E0EC1 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6DF27FF74CC009E0EC1 /* Images.swift */; };
 		188BC6E227FF7D56009E0EC1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6E127FF7D55009E0EC1 /* ProfileViewModel.swift */; };
-		188BC6E427FF8046009E0EC1 /* UserOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6E327FF8046009E0EC1 /* UserOptions.swift */; };
+		188BC6E427FF8046009E0EC1 /* ProfileUserOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6E327FF8046009E0EC1 /* ProfileUserOptions.swift */; };
 		188BC6EA27FF838E009E0EC1 /* UserOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6E827FF838E009E0EC1 /* UserOptionCell.swift */; };
 		188BC6EB27FF838E009E0EC1 /* UserOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188BC6E927FF838E009E0EC1 /* UserOptionCell.xib */; };
 		188BC6EE27FF8A31009E0EC1 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6ED27FF8A31009E0EC1 /* UITableView.swift */; };
@@ -57,6 +57,9 @@
 		18A8D9C427F9EBF20060D0DF /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D9C227F9EBF20060D0DF /* RegistrationViewController.xib */; };
 		18A8D9C727F9ED250060D0DF /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8D9C627F9ED250060D0DF /* BaseTextField.swift */; };
 		18A8D9C927F9F76C0060D0DF /* CustomComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8D9C827F9F76C0060D0DF /* CustomComponent.swift */; };
+		18B5A5B228016C50009EF992 /* ProfileViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5B128016C50009EF992 /* ProfileViewFactory.swift */; };
+		18B5A5B528016E52009EF992 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5B428016E52009EF992 /* BaseViewController.swift */; };
+		18B5A5B728016E8D009EF992 /* TabBarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5B628016E8D009EF992 /* TabBarItemViewController.swift */; };
 		AEB0A9BDB46D9C0CD0B093FC /* Pods_GetOutfit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8C6F4ACEC3C20A1E943D75 /* Pods_GetOutfit.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,7 +91,7 @@
 		188BC6DD27FF749F009E0EC1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		188BC6DF27FF74CC009E0EC1 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		188BC6E127FF7D55009E0EC1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		188BC6E327FF8046009E0EC1 /* UserOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOptions.swift; sourceTree = "<group>"; };
+		188BC6E327FF8046009E0EC1 /* ProfileUserOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserOptions.swift; sourceTree = "<group>"; };
 		188BC6E827FF838E009E0EC1 /* UserOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOptionCell.swift; sourceTree = "<group>"; };
 		188BC6E927FF838E009E0EC1 /* UserOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserOptionCell.xib; sourceTree = "<group>"; };
 		188BC6ED27FF8A31009E0EC1 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
@@ -113,6 +116,9 @@
 		18A8D9C227F9EBF20060D0DF /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		18A8D9C627F9ED250060D0DF /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		18A8D9C827F9F76C0060D0DF /* CustomComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponent.swift; sourceTree = "<group>"; };
+		18B5A5B128016C50009EF992 /* ProfileViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewFactory.swift; sourceTree = "<group>"; };
+		18B5A5B428016E52009EF992 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		18B5A5B628016E8D009EF992 /* TabBarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewController.swift; sourceTree = "<group>"; };
 		56C26585AC992212D3CE7F7F /* Pods-GetOutfit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOutfit.debug.xcconfig"; path = "Target Support Files/Pods-GetOutfit/Pods-GetOutfit.debug.xcconfig"; sourceTree = "<group>"; };
 		8914ED0886F721153ED76797 /* Pods-GetOutfit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetOutfit.release.xcconfig"; path = "Target Support Files/Pods-GetOutfit/Pods-GetOutfit.release.xcconfig"; sourceTree = "<group>"; };
 		FC8C6F4ACEC3C20A1E943D75 /* Pods_GetOutfit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetOutfit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,8 +220,9 @@
 				188BC6C527FF6E8D009E0EC1 /* ProfileViewController.swift */,
 				188BC6C627FF6E8D009E0EC1 /* ProfileViewController.xib */,
 				188BC6E127FF7D55009E0EC1 /* ProfileViewModel.swift */,
-				188BC6E327FF8046009E0EC1 /* UserOptions.swift */,
+				188BC6E327FF8046009E0EC1 /* ProfileUserOptions.swift */,
 				181A07862800E355000BC0E6 /* ProfileProtocols.swift */,
+				18B5A5B128016C50009EF992 /* ProfileViewFactory.swift */,
 			);
 			path = ProfileViewController;
 			sourceTree = "<group>";
@@ -356,6 +363,7 @@
 		18A8D9BF27F9EBD20060D0DF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18B5A5B328016E42009EF992 /* Base */,
 				188BC6C427FF6E7A009E0EC1 /* ProfileViewController */,
 				1850B0AA27FB132C00EE7D79 /* TabBarViewController */,
 				18A8D9C027F9EBDA0060D0DF /* RegistartionViewController */,
@@ -380,6 +388,15 @@
 				18A8D9C827F9F76C0060D0DF /* CustomComponent.swift */,
 			);
 			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		18B5A5B328016E42009EF992 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				18B5A5B428016E52009EF992 /* BaseViewController.swift */,
+				18B5A5B628016E8D009EF992 /* TabBarItemViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		1CB5DE30A117E7FED043D54D /* Frameworks */ = {
@@ -527,11 +544,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B5A5B728016E8D009EF992 /* TabBarItemViewController.swift in Sources */,
 				1850B0BD27FB83EC00EE7D79 /* Categories.swift in Sources */,
 				18A8D9C327F9EBF20060D0DF /* RegistrationViewController.swift in Sources */,
 				18A8D9C727F9ED250060D0DF /* BaseTextField.swift in Sources */,
 				1850B0B827FB820700EE7D79 /* AppConfig.swift in Sources */,
 				1850B0BA27FB82BA00EE7D79 /* API.swift in Sources */,
+				18B5A5B528016E52009EF992 /* BaseViewController.swift in Sources */,
 				1852529127FEBB3C00B396A0 /* JSON.swift in Sources */,
 				188BC6C727FF6E8D009E0EC1 /* ProfileViewController.swift in Sources */,
 				188BC6EA27FF838E009E0EC1 /* UserOptionCell.swift in Sources */,
@@ -539,6 +558,7 @@
 				1850B0C027FB9AC800EE7D79 /* Optional.swift in Sources */,
 				188BC6DE27FF749F009E0EC1 /* Colors.swift in Sources */,
 				188BC6E027FF74CC009E0EC1 /* Images.swift in Sources */,
+				18B5A5B228016C50009EF992 /* ProfileViewFactory.swift in Sources */,
 				182B04D227FA26C700BD716C /* StorageManager.swift in Sources */,
 				1850B0AE27FB136100EE7D79 /* TabBarViewController.swift in Sources */,
 				18A8D9B927F9B04F0060D0DF /* UIImageView.swift in Sources */,
@@ -549,7 +569,7 @@
 				188BC6B927FF448D009E0EC1 /* Occasions.swift in Sources */,
 				1850B0C227FBA06600EE7D79 /* String.swift in Sources */,
 				185823E527FE57E100AAE7E0 /* Timestamp.swift in Sources */,
-				188BC6E427FF8046009E0EC1 /* UserOptions.swift in Sources */,
+				188BC6E427FF8046009E0EC1 /* ProfileUserOptions.swift in Sources */,
 				188BC6BB27FF46F7009E0EC1 /* Onboarding.swift in Sources */,
 				1852528E27FEB94000B396A0 /* DateFormatter.swift in Sources */,
 				18A8D98B27F9ACA40060D0DF /* AppDelegate.swift in Sources */,
