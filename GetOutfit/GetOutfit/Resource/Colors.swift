@@ -9,6 +9,8 @@ import UIKit
 
 extension UIColor {
     static let appBackground = UIColor(hex: "#8DBDAF")
+    static let shadowColor = UIColor(hex: "#c5c5c5")
+    static let activeButton = UIColor(hex: "##3a9bff")
     static let textPrimary = UIColor(hex: "#000000")
     static let textSecondary = UIColor(hex: "#818181")
     static let separatorLine = UIColor(hex: "#000000")

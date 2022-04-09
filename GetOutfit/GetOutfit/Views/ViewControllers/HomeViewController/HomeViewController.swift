@@ -38,7 +38,6 @@ extension HomeViewController: UICollectionViewDataSource {
         if let viewModel = viewModel {
             (header.input, header.output) = viewModel.getSectionItem(indexPath)
         }
-        header.backgroundColor = .green
         return header
     }
     
@@ -59,12 +58,21 @@ extension HomeViewController: UICollectionViewDataSource {
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: 50)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 300)
+        return CGSize(width: 200, height: 350)
     }
 }
 
 // MARK: - CollectionViewDelegate
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+}
 
 // MARK: - FeedSectionHeaderViewDelegate
 extension HomeViewController {

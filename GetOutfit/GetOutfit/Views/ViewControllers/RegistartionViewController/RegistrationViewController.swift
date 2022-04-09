@@ -15,7 +15,7 @@ extension RegistrationViewController {
     struct Appearance {
         let segmentControlBackground: UIColor = UIColor.segmentControlDefault
         let segmentControlActive: UIColor = UIColor.segmentControlActive
-        let nextBtnBackground: UIColor = UIColor.blue
+        let nextBtnBackground: UIColor = UIColor.activeButton
         let nextBtnTextFont: UIFont = SFProDisplay.font(style: .medium, size: 16)
         let nextBtnTextColor: UIColor = UIColor.white
     }

@@ -18,6 +18,7 @@ class FeedItemCollectionCell: UICollectionViewCell, CollectionViewCellProtocol {
     @IBOutlet private weak var favoriteButton: UIButton!
     
     // MARK: - Private variable
+    private let _layout = Layout()
     private let _appearance = Appearance()
     private let _content = Content()
     
@@ -32,6 +33,7 @@ extension FeedItemCollectionCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupSubviews()
+        self.setupLayout()
         self.setupAppearance()
         self.setupStaticContent()
         
@@ -44,13 +46,21 @@ extension FeedItemCollectionCell {
 // MARK: - Setup function
 extension FeedItemCollectionCell {
     private func setupSubviews() {
+        backgroundView?.layer.masksToBounds = false
+        backgroundView?.layer.shadowOpacity = 1
         title.textAlignment = .center
         subTitle.textAlignment = .center
         amount.textAlignment = .center
         favoriteButton.addTarget(self, action: #selector(favoriteButtonAction), for: .touchUpInside)
     }
     
+    private func setupLayout() {
+        backgroundView?.layer.cornerRadius = _layout.contentViewRadius
+        backgroundView?.layer.shadowRadius = _layout.contentViewShadowRadius
+    }
+    
     private func setupAppearance() {
+        backgroundView?.layer.shadowColor = _appearance.contentViewShadowColor.cgColor
         title.font = _appearance.titleFont
         title.textColor = _appearance.titleColor
         subTitle.font = _appearance.subTitleFont

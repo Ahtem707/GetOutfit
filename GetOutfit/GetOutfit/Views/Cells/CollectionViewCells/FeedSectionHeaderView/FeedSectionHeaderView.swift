@@ -48,8 +48,8 @@ extension FeedSectionHeaderView {
     private func setupAppearance() {
         label.font = _appearance.labelFont
         label.textColor = _appearance.labelColor
-        allButton.font = _appearance.labelFont
-        allButton.textColor = _appearance.labelColor
+        allButton.font = _appearance.allButtonFont
+        allButton.textColor = _appearance.allButtonColor
     }
     
     private func setupStaticContent() {

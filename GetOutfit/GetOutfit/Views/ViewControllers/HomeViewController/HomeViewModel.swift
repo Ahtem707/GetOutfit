@@ -29,7 +29,7 @@ extension HomeViewModel {
     }
     
     func getNumberOfItemsInSection() -> Int {
-        return 10
+        return 9
     }
     
     func getCellContent(_ indexPath: IndexPath) -> (FeedItemCollectionCell.In, FeedItemCollectionCell.Out) {
