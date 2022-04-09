@@ -31,7 +31,7 @@ class ProfileViewController: TabBarItemViewController, ProfileViewControllerDele
     
     let _layout = Layout()
     let _appearance = Appearance()
-    var viewModel: ProfileViewModelDelegate? = ProfileViewModel()
+    var viewModel: ProfileViewModelProtocol? = ProfileViewModel()
     var factory: ProfileViewFactoryProtocol = ProfileViewFactory()
 }
 

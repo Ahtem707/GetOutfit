@@ -28,8 +28,6 @@ extension UserOptionCell {
 }
 
 class UserOptionCell: UITableViewCell {
-    
-    static let reuseId = String.className(UserOptionCell.self)
 
     @IBOutlet private weak var optionIcon: UIImageView!
     @IBOutlet private weak var label: UILabel!

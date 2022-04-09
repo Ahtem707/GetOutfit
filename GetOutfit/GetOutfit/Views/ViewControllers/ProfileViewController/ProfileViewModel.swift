@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProfileViewModel: ProfileViewModelDelegate {
+class ProfileViewModel: ProfileViewModelProtocol {
     
     var delegate: ProfileViewControllerDelegate?
     

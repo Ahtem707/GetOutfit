@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - ViewController -> ViewModel
-protocol ProfileViewModelDelegate {
+protocol ProfileViewModelProtocol {
     var delegate: ProfileViewControllerDelegate? { get set }
     var userName: String { get }
     func getTableCellCount() -> Int
