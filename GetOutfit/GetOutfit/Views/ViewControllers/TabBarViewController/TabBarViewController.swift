@@ -33,9 +33,11 @@ class TabBarViewController: UITabBarController {
     private func setupTabBarItems() {
         self.viewControllers = TabBarItems.allCases.compactMap {
             let vc = $0.viewController
+            let nav = UINavigationController(rootViewController: vc)
             vc.tabBarItem.title = $0.title
             vc.tabBarItem.image = $0.image
-            return UINavigationController(rootViewController: vc)
+            vc.navigationController?.navigationBar.isHidden = true
+            return nav
         }
     }
 }

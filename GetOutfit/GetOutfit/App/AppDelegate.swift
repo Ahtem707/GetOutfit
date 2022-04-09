@@ -11,23 +11,29 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    static var rootVC: UIViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // TODO: - Удаление данных пользователя, позволяет попасть на страницу регистрации
-//        StorageManager.user = nil
-        
-        window = UIWindow()
-        
-        let rootVC = TabBarViewController()
-        let navigationController = UINavigationController(rootViewController: rootVC)
-        if StorageManager.user == nil {
-            let regVC = RegistrationViewController()
-            navigationController.addChild(regVC)
-        }
-        window?.rootViewController = navigationController
+        let vc = AppDelegate.updateRootViewController()
+        window?.rootViewController = vc
         
         return true
     }
 }
 
+extension AppDelegate {
+    // TODO: - Не нравиться реализация, пересмотреть
+    @discardableResult
+    static func updateRootViewController() -> UIViewController {
+        let navVC: UIViewController
+        if StorageManager.user == nil {
+            let vc = RegistrationViewController()
+            navVC = UINavigationController(rootViewController: vc)
+        } else {
+            navVC = TabBarViewController()
+        }
+        UIApplication.shared.keyWindow?.rootViewController = navVC
+        return navVC
+    }
+}

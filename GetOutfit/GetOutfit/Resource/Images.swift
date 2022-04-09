@@ -1,11 +1,10 @@
 //
-//  UIImage.swift
+//  Images.swift
 //  GetOutfit
 //
-//  Created by Ahtem Sitjalilov on 03.04.2022.
+//  Created by Ahtem Sitjalilov on 07.04.2022.
 //
 
-import Foundation
 import UIKit
 
 extension UIImage {

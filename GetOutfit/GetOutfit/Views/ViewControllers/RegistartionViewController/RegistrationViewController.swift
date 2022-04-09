@@ -82,7 +82,6 @@ extension RegistrationViewController {
         user.name = nameTextField.text
         user.gender = UserGender.allCases[index]
         StorageManager.user = user
-        
-        self.navigationController?.popToRootViewController(animated: false)
+        AppDelegate.updateRootViewController()
     }
 }

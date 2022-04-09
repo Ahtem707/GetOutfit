@@ -14,4 +14,8 @@ extension String {
         let res = "\(value)".replacingOccurrences(of: ".", with: ",")
         return String(format: self, res)
     }
+    
+    static func className(_ aClass: AnyClass) -> String {
+        return NSStringFromClass(aClass).components(separatedBy: ".").last!
+    }
 }
