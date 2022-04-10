@@ -9,16 +9,19 @@ import Foundation
 import ObjectMapper
 
 extension StorageManager {
-    fileprivate static let favoriteProductKey = "favoritProduct"
+    
+    static var favoriteCash: [Int] = []
+    
+    fileprivate static let favoriteProductKey = StorageManager.Keys.favoritProduct.str
     static var favoriteProduct: FavoriteProduct? {
         get {
-            shared.mappable(type: FavoriteProduct.self, forKey: StorageManager.favoriteProductKey)
+            shared.mappable(type: FavoriteProduct.self, forKey: self.favoriteProductKey)
         }
         set {
             if newValue == nil {
-                shared.removeObject(forKey: StorageManager.favoriteProductKey)
+                shared.removeObject(forKey: self.favoriteProductKey)
             }
-            shared.set(newValue?.toJSONString(), forKey: StorageManager.favoriteProductKey)
+            shared.set(newValue?.toJSONString(), forKey: self.favoriteProductKey)
         }
     }
 }

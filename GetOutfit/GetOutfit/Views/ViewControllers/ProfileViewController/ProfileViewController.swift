@@ -121,6 +121,7 @@ extension ProfileViewController {
         // Удалить данные пользователя
         StorageManager.user = nil
         StorageManager.favoriteProduct = nil
+        StorageManager.favoriteCash = []
         // Переход на регистрацию
         AppDelegate.updateRootViewController()
     }

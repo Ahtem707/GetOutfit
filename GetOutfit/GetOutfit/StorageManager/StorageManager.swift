@@ -8,8 +8,17 @@
 import Foundation
 import ObjectMapper
 
-enum StorageManager {
+final class StorageManager {
     static let shared = UserDefaults.standard
+    
+    enum Keys: String {
+        case user
+        case favoritProduct
+        
+        var str: String {
+            return self.rawValue
+        }
+    }
 }
 
 extension UserDefaults {

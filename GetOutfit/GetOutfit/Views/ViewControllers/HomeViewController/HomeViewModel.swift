@@ -16,27 +16,11 @@ class HomeViewModel: HomeViewModelProtocol {
     var handleViewWillDisappear: Closure?
     
     var products: [Items] = []
-    var favoritProducts: [Int] = []
     
     var dGroup: DispatchGroup? = DispatchGroup()
     
     init() {
         self.fetchProducts()
-        self.setupClosures()
-    }
-    
-    private func setupClosures() {
-        handleViewWillAppear = { [weak self] in
-            if let favorites = StorageManager.favoriteProduct?.favoriteProductId {
-                self?.favoritProducts = favorites
-            }
-        }
-        
-        handleViewWillDisappear = { [weak self] in
-            let favorites = FavoriteProduct()
-            favorites.favoriteProductId = self?.favoritProducts
-            StorageManager.favoriteProduct = favorites
-        }
     }
 }
 
@@ -63,7 +47,7 @@ extension HomeViewModel {
         let item = products[indexPath.row]
         
         guard let id = item.id else { return (nil, nil) }
-        let isFavorit = favoritProducts.contains(id)
+        let isFavorit = StorageManager.favoriteCash.contains(id)
         
         let input = FeedItemCollectionCell.In(
             id: id,
@@ -76,9 +60,9 @@ extension HomeViewModel {
         let output = FeedItemCollectionCell.Out(
             didSelectFavoriteButtonClosure: { [weak self] (id, isFavorit) in
                 if isFavorit {
-                    self?.favoritProducts.append(id)
+                    StorageManager.favoriteCash.append(id)
                 } else {
-                    self?.favoritProducts.removeAll(where: { $0 == id })
+                    StorageManager.favoriteCash.removeAll(where: { $0 == id })
                 }
             })
         

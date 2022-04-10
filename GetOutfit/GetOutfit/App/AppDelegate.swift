@@ -15,10 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        // Загрузить данные в кеш
+        if let ids = StorageManager.favoriteProduct?.favoriteProductId {
+            StorageManager.favoriteCash = ids
+        } else {
+            StorageManager.favoriteCash = []
+        }
+        
         let vc = AppDelegate.updateRootViewController()
         window?.rootViewController = vc
         
         return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // Загрузить данные из кеша в UserDefault
+        let favorit = FavoriteProduct()
+        favorit.favoriteProductId = StorageManager.favoriteCash
+        StorageManager.favoriteProduct = favorit
     }
 }
 

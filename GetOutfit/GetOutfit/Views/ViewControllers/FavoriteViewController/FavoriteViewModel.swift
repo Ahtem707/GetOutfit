@@ -16,26 +16,14 @@ class FavoriteViewModel: FavoriteViewModelProtocol {
     var handleViewWillDisappear: Closure?
     
     var products: [Items] = []
-    var favoritProducts: [Int] = []
-    
-    var dGroup: DispatchGroup? = DispatchGroup()
     
     init() {
-        self.fetchProducts()
         self.setupClosures()
     }
     
     private func setupClosures() {
         handleViewWillAppear = { [weak self] in
-            if let favorites = StorageManager.favoriteProduct?.favoriteProductId {
-                self?.favoritProducts = favorites
-            }
-        }
-        
-        handleViewWillDisappear = { [weak self] in
-            let favorites = FavoriteProduct()
-            favorites.favoriteProductId = self?.favoritProducts
-            StorageManager.favoriteProduct = favorites
+            self?.fetchProducts()
         }
     }
 }
@@ -52,7 +40,7 @@ extension FavoriteViewModel {
         let item = products[indexPath.row]
         
         guard let id = item.id else { return (nil, nil) }
-        let isFavorit = favoritProducts.contains(id)
+        let isFavorit = StorageManager.favoriteCash.contains(id)
         
         let input = FeedItemCollectionCell.In(
             id: id,
@@ -65,9 +53,9 @@ extension FavoriteViewModel {
         let output = FeedItemCollectionCell.Out(
             didSelectFavoriteButtonClosure: { [weak self] (id, isFavorit) in
                 if isFavorit {
-                    self?.favoritProducts.append(id)
+                    StorageManager.favoriteCash.append(id)
                 } else {
-                    self?.favoritProducts.removeAll(where: { $0 == id })
+                    StorageManager.favoriteCash.removeAll(where: { $0 == id })
                 }
             })
         
@@ -79,15 +67,12 @@ extension FavoriteViewModel {
 extension FavoriteViewModel {
     private func fetchProducts() {
         
+        var dGroup: DispatchGroup? = DispatchGroup()
         var requestSuccess = false
-
-        self.dGroup?.enter()
-        handleViewDidAppear = { [weak self] in
-            self?.dGroup?.leave()
-        }
         
-        if let ids = StorageManager.favoriteProduct?.favoriteProductId {
-            self.dGroup?.enter()
+        let ids = StorageManager.favoriteCash
+        if !ids.isEmpty {
+            dGroup?.enter()
             API.items(filter: nil, limit: nil, ids: ids).request { [weak self] (products: [Items]?) in
                 if let products = products, !products.isEmpty {
                     self?.products = products
@@ -95,17 +80,22 @@ extension FavoriteViewModel {
                 } else {
                     requestSuccess = false
                 }
-                self?.dGroup?.leave()
+                dGroup?.leave()
             }
+        } else {
+            self.products = []
+            self.delegate?.reload()
+            self.delegate?.showError()
         }
 
-        self.dGroup?.notify(queue: .main) { [weak self] in
+        dGroup?.notify(queue: .main) { [weak self] in
             if requestSuccess {
-                self?.delegate?.reload()
+                self?.delegate?.hideErrors()
             } else {
                 self?.delegate?.showError()
             }
-            self?.dGroup = nil
+            self?.delegate?.reload()
+            dGroup = nil
         }
     }
 }

@@ -9,16 +9,16 @@ import Foundation
 import ObjectMapper
 
 extension StorageManager {
-    fileprivate static let userKey = "user"
+    fileprivate static let userKey = StorageManager.Keys.user.str
     static var user: User? {
         get {
-            shared.mappable(type: User.self, forKey: StorageManager.userKey)
+            shared.mappable(type: User.self, forKey: self.userKey)
         }
         set {
             if newValue == nil {
-                shared.removeObject(forKey: StorageManager.userKey)
+                shared.removeObject(forKey: self.userKey)
             }
-            shared.set(newValue?.toJSONString(), forKey: StorageManager.userKey)
+            shared.set(newValue?.toJSONString(), forKey: self.userKey)
         }
     }
 }
