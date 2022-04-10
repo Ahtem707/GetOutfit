@@ -118,8 +118,9 @@ extension ProfileViewController {
     }
     
     func exitAction() {
-        // Удалить текущего пользователя
+        // Удалить данные пользователя
         StorageManager.user = nil
+        StorageManager.favoriteProduct = nil
         // Переход на регистрацию
         AppDelegate.updateRootViewController()
     }
