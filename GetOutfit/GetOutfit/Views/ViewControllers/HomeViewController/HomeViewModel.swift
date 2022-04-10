@@ -84,6 +84,10 @@ extension HomeViewModel {
         
         return (input, output)
     }
+    
+    func getCellData(_ indexPath: IndexPath) -> Items {
+        return products[indexPath.row]
+    }
 }
 
 // MARK: - Private function

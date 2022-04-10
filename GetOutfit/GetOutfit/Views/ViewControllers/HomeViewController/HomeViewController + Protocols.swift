@@ -17,6 +17,7 @@ protocol HomeViewModelProtocol {
     func getSectionItem(_ indexPath: IndexPath) -> (FeedSectionHeaderView.In?, FeedSectionHeaderView.Out?)
     func getNumberOfItemsInSection() -> Int
     func getCellContent(_ indexPath: IndexPath) -> (FeedItemCollectionCell.In?, FeedItemCollectionCell.Out?)
+    func getCellData(_ indexPath: IndexPath) -> Items
 }
 
 // MARK: - ViewModel -> ViewController

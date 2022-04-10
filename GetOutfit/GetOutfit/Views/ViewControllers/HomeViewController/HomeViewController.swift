@@ -95,7 +95,19 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - CollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // TODO: - Нажатие на продукт
+        
+        let input = viewModel?.getCellData(indexPath)
+        
+        let productVC = ProductViewController()
+        productVC.input = ProductViewController.In(
+            imageUrl: input?.pictures?.first,
+            name: input?.name,
+            vendor: input?.vendorName,
+            gender: input?.gender,
+            size: input?.size,
+            color: input?.color,
+            category: "Error")
+        self.navigationController?.pushViewController(productVC, animated: true)
     }
 }
 

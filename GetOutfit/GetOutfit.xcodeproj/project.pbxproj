@@ -73,6 +73,8 @@
 		18AAA0AA2802E37400DCAC86 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AAA0A92802E37400DCAC86 /* UIEdgeInsets.swift */; };
 		18AAA0AE2802F53800DCAC86 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AAA0AC2802F53800DCAC86 /* ProductViewController.swift */; };
 		18AAA0AF2802F53800DCAC86 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AAA0AD2802F53800DCAC86 /* ProductViewController.xib */; };
+		18AAA0B128033AE200DCAC86 /* ProductViewController + Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AAA0B028033AE200DCAC86 /* ProductViewController + Configurable.swift */; };
+		18AAA0B328033CBD00DCAC86 /* ProductViewController + InOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AAA0B228033CBD00DCAC86 /* ProductViewController + InOut.swift */; };
 		18B5A5B228016C50009EF992 /* ProfileViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5B128016C50009EF992 /* ProfileViewFactory.swift */; };
 		18B5A5B528016E52009EF992 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5B428016E52009EF992 /* BaseViewController.swift */; };
 		18B5A5B728016E8D009EF992 /* TabBarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5A5B628016E8D009EF992 /* TabBarItemViewController.swift */; };
@@ -169,6 +171,8 @@
 		18AAA0A92802E37400DCAC86 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		18AAA0AC2802F53800DCAC86 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		18AAA0AD2802F53800DCAC86 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
+		18AAA0B028033AE200DCAC86 /* ProductViewController + Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductViewController + Configurable.swift"; sourceTree = "<group>"; };
+		18AAA0B228033CBD00DCAC86 /* ProductViewController + InOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductViewController + InOut.swift"; sourceTree = "<group>"; };
 		18B5A5B128016C50009EF992 /* ProfileViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewFactory.swift; sourceTree = "<group>"; };
 		18B5A5B428016E52009EF992 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		18B5A5B628016E8D009EF992 /* TabBarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemViewController.swift; sourceTree = "<group>"; };
@@ -524,6 +528,8 @@
 			children = (
 				18AAA0AC2802F53800DCAC86 /* ProductViewController.swift */,
 				18AAA0AD2802F53800DCAC86 /* ProductViewController.xib */,
+				18AAA0B028033AE200DCAC86 /* ProductViewController + Configurable.swift */,
+				18AAA0B228033CBD00DCAC86 /* ProductViewController + InOut.swift */,
 			);
 			path = ProductViewController;
 			sourceTree = "<group>";
@@ -789,6 +795,7 @@
 				18B5A5B228016C50009EF992 /* ProfileViewFactory.swift in Sources */,
 				182B04D227FA26C700BD716C /* StorageManager.swift in Sources */,
 				1850B0AE27FB136100EE7D79 /* TabBarViewController.swift in Sources */,
+				18AAA0B328033CBD00DCAC86 /* ProductViewController + InOut.swift in Sources */,
 				18A8D9B927F9B04F0060D0DF /* UIImageView.swift in Sources */,
 				181A07872800E355000BC0E6 /* ProfileProtocols.swift in Sources */,
 				18B5A5F8280226AE009EF992 /* HomeViewController + Configurable.swift in Sources */,
@@ -811,6 +818,7 @@
 				18B5A5E72801AC18009EF992 /* FeedItemCollectionCell + Configurable.swift in Sources */,
 				18B5A5D228018212009EF992 /* FeedSectionHeaderView.swift in Sources */,
 				188BC6E227FF7D56009E0EC1 /* ProfileViewModel.swift in Sources */,
+				18AAA0B128033AE200DCAC86 /* ProductViewController + Configurable.swift in Sources */,
 				18B5A5EB2801AC90009EF992 /* FeedItemCollectionCell + InOut.swift in Sources */,
 				182B04D527FA33D000BD716C /* User.swift in Sources */,
 				18AAA0932802C05200DCAC86 /* Closures.swift in Sources */,
