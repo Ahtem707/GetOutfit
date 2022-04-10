@@ -16,5 +16,6 @@ extension UIImage {
     static let stubImage = UIImage(named: "System/stubImage")!
     static let favorite = UIImage(named: "System/favorite")!
     static let favoriteSelected = UIImage(named: "System/favoriteSelected")!
+    static let favoritEmpty = UIImage(named: "System/favoritEmpty")!
     static let clothesDefault = UIImage(named: "System/clothesDefault")!
 }

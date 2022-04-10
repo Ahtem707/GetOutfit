@@ -17,7 +17,7 @@ enum TabBarItems: CaseIterable {
         switch self {
             case .home: return HomeViewController()
             case .myImage: return StubViewController()
-            case .favorite: return StubViewController()
+            case .favorite: return FavoriteViewController()
             case .profile: return ProfileViewController()
         }
     }

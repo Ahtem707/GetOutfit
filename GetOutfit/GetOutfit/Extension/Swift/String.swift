@@ -15,6 +15,15 @@ extension String {
         return String(format: self, res)
     }
     
+    func format(array: [Any]) -> String? {
+        if array.isEmpty { return nil }
+        var res = "\(array)"
+        res.removeFirst()
+        res.removeLast()
+        res = res.replacingOccurrences(of: " ", with: "")
+        return String(format: self, res)
+    }
+    
     static func className(_ aClass: AnyClass) -> String {
         return NSStringFromClass(aClass).components(separatedBy: ".").last!
     }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductViewController" customModule="GetOutfit" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y4H-aI-fx1">
+                    <rect key="frame" x="0.0" y="34" width="414" height="474.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ErJ-5l-PVC">
+                            <rect key="frame" x="57" y="20" width="300" height="400"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="hnK-qt-Ten"/>
+                                <constraint firstAttribute="height" constant="400" id="ujP-gy-svv"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="K36-9Q-iSI">
+                            <rect key="frame" x="14" y="434" width="41.5" height="20.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGB-kf-Xk9" userLabel="name">
+                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ErJ-5l-PVC" firstAttribute="centerX" secondItem="Y4H-aI-fx1" secondAttribute="centerX" id="Nap-mV-MaX"/>
+                        <constraint firstAttribute="trailing" secondItem="K36-9Q-iSI" secondAttribute="trailing" constant="14" id="WEG-z4-Ht0"/>
+                        <constraint firstItem="K36-9Q-iSI" firstAttribute="leading" secondItem="Y4H-aI-fx1" secondAttribute="leading" constant="14" id="l9Y-Pv-rQk"/>
+                        <constraint firstItem="K36-9Q-iSI" firstAttribute="top" secondItem="ErJ-5l-PVC" secondAttribute="bottom" constant="14" id="oNs-9D-YrP"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Y4H-aI-fx1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bY4-rF-3jV"/>
+                <constraint firstItem="Y4H-aI-fx1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pii-fI-K0I"/>
+                <constraint firstAttribute="trailing" secondItem="Y4H-aI-fx1" secondAttribute="trailing" id="v8P-oF-MJo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Y4H-aI-fx1" secondAttribute="bottom" id="yJX-va-b3c"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="100"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

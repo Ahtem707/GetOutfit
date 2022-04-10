@@ -10,10 +10,10 @@ import Foundation
 
 // TODO: - Пересмотреть, не понравилась реализация фильтра
 enum API: UrlPath {
-    static private var limit = 10
+    static private var limit = 50
     
     case categories(filter: Categories?, limit: Int? = limit)
-    case items(filter: Items?, limit: Int? = limit)
+    case items(filter: Items?, limit: Int? = limit, ids: [Int] = [])
     case occasions(filter: Occasion?, limit: Int? = limit)
     case onboarding(filter: Onboarding?, limit: Int? = limit)
     case server(filter: Server?, limit: Int? = limit)
@@ -27,9 +27,9 @@ enum API: UrlPath {
             parameters[f.id.str] ?= "in.(%@)".format(filter?.id)
             parameters[f.name.str] ?= "like.*%@*".format(filter?.name)
             parameters["limit"] ?= "%@".format(limit)
-        case .items(let filter, let limit):
+        case .items(let filter, let limit, let ids):
             typealias f = Items.CodingKeys
-            parameters[f.id.str] ?= "in.(%@)".format(filter?.id)
+            parameters[f.id.str] ?= "in.(%@)".format(array: ids)
             parameters[f.name.str] ?= "like.*%@*".format(filter?.name)
             parameters[f.gender.str] ?= "in.(%@)".format(filter?.gender)
             parameters[f.size.str] ?= "like.*%@*".format(filter?.size)

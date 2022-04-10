@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class HomeViewModel: HomeViewModelProtocol {
+class FavoriteViewModel: FavoriteViewModelProtocol {
     
-    var delegate: HomeViewControllerDelegate?
+    var delegate: FavoriteViewControllerDelegate?
     var handleViewWillAppear: Closure?
     var handleViewDidAppear: Closure?
     var handleViewWillDisappear: Closure?
@@ -41,18 +41,7 @@ class HomeViewModel: HomeViewModelProtocol {
 }
 
 // MARK: - HomeViewModelProtocol
-extension HomeViewModel {
-    
-    func getNumberOfSections() -> Int {
-        return 1
-    }
-    
-    func getSectionItem(_ indexPath: IndexPath) -> (FeedSectionHeaderView.In?, FeedSectionHeaderView.Out?) {
-        let input = FeedSectionHeaderView.In(
-            title: "Test")
-        
-        return (input, nil)
-    }
+extension FavoriteViewModel {
     
     func getNumberOfItemsInSection() -> Int {
         return products.count
@@ -87,18 +76,20 @@ extension HomeViewModel {
 }
 
 // MARK: - Private function
-extension HomeViewModel {
+extension FavoriteViewModel {
     private func fetchProducts() {
+        guard let ids = StorageManager.favoriteProduct?.favoriteProductId
+        else { return }
         
         var requestSuccess = false
-        
+
         self.dGroup?.enter()
         handleViewDidAppear = { [weak self] in
             self?.dGroup?.leave()
         }
-        
+
         self.dGroup?.enter()
-        API.items(filter: nil).request { [weak self] (products: [Items]?) in
+        API.items(filter: nil, limit: nil, ids: ids).request { [weak self] (products: [Items]?) in
             if let products = products, !products.isEmpty {
                 self?.products = products
                 requestSuccess = true
@@ -107,7 +98,7 @@ extension HomeViewModel {
             }
             self?.dGroup?.leave()
         }
-        
+
         self.dGroup?.notify(queue: .main) { [weak self] in
             if requestSuccess {
                 self?.delegate?.reload()
