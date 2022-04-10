@@ -78,8 +78,6 @@ extension FavoriteViewModel {
 // MARK: - Private function
 extension FavoriteViewModel {
     private func fetchProducts() {
-        guard let ids = StorageManager.favoriteProduct?.favoriteProductId
-        else { return }
         
         var requestSuccess = false
 
@@ -87,16 +85,18 @@ extension FavoriteViewModel {
         handleViewDidAppear = { [weak self] in
             self?.dGroup?.leave()
         }
-
-        self.dGroup?.enter()
-        API.items(filter: nil, limit: nil, ids: ids).request { [weak self] (products: [Items]?) in
-            if let products = products, !products.isEmpty {
-                self?.products = products
-                requestSuccess = true
-            } else {
-                requestSuccess = false
+        
+        if let ids = StorageManager.favoriteProduct?.favoriteProductId {
+            self.dGroup?.enter()
+            API.items(filter: nil, limit: nil, ids: ids).request { [weak self] (products: [Items]?) in
+                if let products = products, !products.isEmpty {
+                    self?.products = products
+                    requestSuccess = true
+                } else {
+                    requestSuccess = false
+                }
+                self?.dGroup?.leave()
             }
-            self?.dGroup?.leave()
         }
 
         self.dGroup?.notify(queue: .main) { [weak self] in
