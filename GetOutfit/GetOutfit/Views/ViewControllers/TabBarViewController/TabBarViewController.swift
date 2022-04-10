@@ -32,6 +32,10 @@ class TabBarViewController: UITabBarController {
     
     private func setupTabBarItems() {
         self.viewControllers = TabBarItems.allCases.compactMap {
+            
+            // TODO: - Исключаем не завершенный экран
+            if $0 == .myImage { return nil }
+            
             let vc = $0.viewController
             let nav = UINavigationController(rootViewController: vc)
             vc.tabBarItem.title = $0.title

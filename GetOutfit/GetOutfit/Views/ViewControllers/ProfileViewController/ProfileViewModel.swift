@@ -19,7 +19,8 @@ class ProfileViewModel: ProfileViewModelProtocol {
         return "!Error!"
     }
     
-    private let userOptions = ProfileUserOptions.allCases
+    // Выключаем не доработанный функционал
+    private let userOptions = ProfileUserOptions.allCases.filter { $0 != .favoriteBrands}
     
     func getTableCellCount() -> Int {
         return userOptions.count
