@@ -20,9 +20,6 @@
 		1850B0C427FBA76300EE7D79 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850B0C327FBA76300EE7D79 /* Enum.swift */; };
 		1852528E27FEB94000B396A0 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852528D27FEB94000B396A0 /* DateFormatter.swift */; };
 		1852529127FEBB3C00B396A0 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1852529027FEBB3C00B396A0 /* JSON.swift */; };
-		185823E127FE52F600AAE7E0 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185823E027FE52F600AAE7E0 /* Items.swift */; };
-		185823E327FE573200AAE7E0 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185823E227FE573200AAE7E0 /* Gender.swift */; };
-		185823E527FE57E100AAE7E0 /* Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185823E427FE57E100AAE7E0 /* Timestamp.swift */; };
 		188BC6B927FF448D009E0EC1 /* Occasions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6B827FF448D009E0EC1 /* Occasions.swift */; };
 		188BC6BB27FF46F7009E0EC1 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6BA27FF46F7009E0EC1 /* Onboarding.swift */; };
 		188BC6BD27FF483E009E0EC1 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6BC27FF483E009E0EC1 /* Server.swift */; };
@@ -37,6 +34,9 @@
 		188BC6EA27FF838E009E0EC1 /* UserOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6E827FF838E009E0EC1 /* UserOptionCell.swift */; };
 		188BC6EB27FF838E009E0EC1 /* UserOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188BC6E927FF838E009E0EC1 /* UserOptionCell.xib */; };
 		188BC6EE27FF8A31009E0EC1 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BC6ED27FF8A31009E0EC1 /* UITableView.swift */; };
+		18A3F4AE2809703800018884 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3F4AD2809703800018884 /* Items.swift */; };
+		18A3F4B02809706B00018884 /* Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3F4AF2809706B00018884 /* Timestamp.swift */; };
+		18A3F4B22809707200018884 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3F4B12809707200018884 /* Gender.swift */; };
 		18A8D98B27F9ACA40060D0DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8D98A27F9ACA40060D0DF /* AppDelegate.swift */; };
 		18A8D99427F9ACA70060D0DF /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D99327F9ACA70060D0DF /* App.xcassets */; };
 		18A8D99727F9ACA70060D0DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A8D99527F9ACA70060D0DF /* LaunchScreen.storyboard */; };
@@ -116,9 +116,6 @@
 		1850B0C327FBA76300EE7D79 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		1852528D27FEB94000B396A0 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		1852529027FEBB3C00B396A0 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		185823E027FE52F600AAE7E0 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Items.swift; path = ../../../../../../Items.swift; sourceTree = "<group>"; };
-		185823E227FE573200AAE7E0 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = ../../../../../../Gender.swift; sourceTree = "<group>"; };
-		185823E427FE57E100AAE7E0 /* Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Timestamp.swift; path = ../../../../../../Timestamp.swift; sourceTree = "<group>"; };
 		187A64BB27FE37790090B442 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		188BC6B827FF448D009E0EC1 /* Occasions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occasions.swift; sourceTree = "<group>"; };
 		188BC6BA27FF46F7009E0EC1 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
@@ -134,6 +131,9 @@
 		188BC6E827FF838E009E0EC1 /* UserOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOptionCell.swift; sourceTree = "<group>"; };
 		188BC6E927FF838E009E0EC1 /* UserOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserOptionCell.xib; sourceTree = "<group>"; };
 		188BC6ED27FF8A31009E0EC1 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		18A3F4AD2809703800018884 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		18A3F4AF2809706B00018884 /* Timestamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
+		18A3F4B12809707200018884 /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		18A8D98727F9ACA40060D0DF /* GetOutfit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetOutfit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A8D98A27F9ACA40060D0DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A8D99327F9ACA70060D0DF /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
@@ -264,11 +264,11 @@
 			children = (
 				1852528F27FEBB2D00B396A0 /* Coders */,
 				1850B0BC27FB83EC00EE7D79 /* Categories.swift */,
-				185823E027FE52F600AAE7E0 /* Items.swift */,
-				185823E227FE573200AAE7E0 /* Gender.swift */,
-				185823E427FE57E100AAE7E0 /* Timestamp.swift */,
+				18A3F4AD2809703800018884 /* Items.swift */,
+				18A3F4B12809707200018884 /* Gender.swift */,
 				188BC6B827FF448D009E0EC1 /* Occasions.swift */,
 				188BC6BA27FF46F7009E0EC1 /* Onboarding.swift */,
+				18A3F4AF2809706B00018884 /* Timestamp.swift */,
 				188BC6BC27FF483E009E0EC1 /* Server.swift */,
 			);
 			path = Models;
@@ -767,6 +767,7 @@
 				18AAA0A82802D3AD00DCAC86 /* ErrorAlertView + Configurable.swift in Sources */,
 				18B5A5B728016E8D009EF992 /* TabBarItemViewController.swift in Sources */,
 				18AAA0992802C52D00DCAC86 /* ErrorAlert.swift in Sources */,
+				18A3F4B22809707200018884 /* Gender.swift in Sources */,
 				18B5A5FC280241C6009EF992 /* WebViewController.swift in Sources */,
 				18B5A5D128018212009EF992 /* FeedItemCollectionCell.swift in Sources */,
 				18B5A5F22801BCC4009EF992 /* CollectionViewCellProtocol.swift in Sources */,
@@ -777,6 +778,7 @@
 				1850B0B827FB820700EE7D79 /* AppConfig.swift in Sources */,
 				1850B0BA27FB82BA00EE7D79 /* API.swift in Sources */,
 				18B5A5B528016E52009EF992 /* BaseViewController.swift in Sources */,
+				18A3F4AE2809703800018884 /* Items.swift in Sources */,
 				1852529127FEBB3C00B396A0 /* JSON.swift in Sources */,
 				18AAA09F2802C77300DCAC86 /* AlertTypes.swift in Sources */,
 				188BC6C727FF6E8D009E0EC1 /* ProfileViewController.swift in Sources */,
@@ -786,7 +788,6 @@
 				18AAA08F2802BF8F00DCAC86 /* FavoriteViewModel.swift in Sources */,
 				18B5A5F62802257B009EF992 /* FavoriteProduct.swift in Sources */,
 				18AAA0AA2802E37400DCAC86 /* UIEdgeInsets.swift in Sources */,
-				185823E327FE573200AAE7E0 /* Gender.swift in Sources */,
 				1850B0C027FB9AC800EE7D79 /* Optional.swift in Sources */,
 				188BC6DE27FF749F009E0EC1 /* Colors.swift in Sources */,
 				18AAA0A32802C8F200DCAC86 /* AlertViewController.swift in Sources */,
@@ -794,6 +795,7 @@
 				18B5A5DE28019D95009EF992 /* NSObject.swift in Sources */,
 				18B5A5B228016C50009EF992 /* ProfileViewFactory.swift in Sources */,
 				182B04D227FA26C700BD716C /* StorageManager.swift in Sources */,
+				18A3F4B02809706B00018884 /* Timestamp.swift in Sources */,
 				1850B0AE27FB136100EE7D79 /* TabBarViewController.swift in Sources */,
 				18AAA0B328033CBD00DCAC86 /* ProductViewController + InOut.swift in Sources */,
 				18A8D9B927F9B04F0060D0DF /* UIImageView.swift in Sources */,
@@ -806,7 +808,6 @@
 				18B5A5E02801A460009EF992 /* HomeViewController + Protocols.swift in Sources */,
 				188BC6B927FF448D009E0EC1 /* Occasions.swift in Sources */,
 				1850B0C227FBA06600EE7D79 /* String.swift in Sources */,
-				185823E527FE57E100AAE7E0 /* Timestamp.swift in Sources */,
 				18B5A5DC28019D6B009EF992 /* UIView.swift in Sources */,
 				18B5A5DA28019922009EF992 /* UICollectionView.swift in Sources */,
 				188BC6E427FF8046009E0EC1 /* ProfileUserOptions.swift in Sources */,
@@ -822,7 +823,6 @@
 				18B5A5EB2801AC90009EF992 /* FeedItemCollectionCell + InOut.swift in Sources */,
 				182B04D527FA33D000BD716C /* User.swift in Sources */,
 				18AAA0932802C05200DCAC86 /* Closures.swift in Sources */,
-				185823E127FE52F600AAE7E0 /* Items.swift in Sources */,
 				188BC6EE27FF8A31009E0EC1 /* UITableView.swift in Sources */,
 				1850B0AD27FB136100EE7D79 /* TabBarItems.swift in Sources */,
 				18AAA0A62802D37E00DCAC86 /* ErrorAlertTypes.swift in Sources */,
